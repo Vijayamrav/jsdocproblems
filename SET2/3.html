@@ -1,0 +1,36 @@
+<!--
+    3. Dynamic Element Creation:
+ Create an HTML file with an empty `<ul>` element and an `<input>` field.
+ Use JavaScript to create a new `<li>` element with text from the input field when a button is 
+clicked, and append it to the `<ul>`.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" class="ip">
+    <button class="btn">add</button>
+    <button class="clear">clear</button>
+    <ul class="ul"></ul>
+    <script>
+           let ul=document.querySelector('.ul');
+           let ip=document.querySelector('.ip');
+           let btn=document.querySelector('.btn');
+           let clear=document.querySelector('.clear');
+           btn.addEventListener('click',()=>{
+            let li=document.createElement('li');
+            li.textContent=ip.value;
+            ul.appendChild(li);
+
+           })
+           clear.addEventListener('click',()=>{
+               ip.value='';
+           })
+    </script>
+</body>
+</html>

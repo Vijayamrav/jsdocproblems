@@ -1,0 +1,38 @@
+<!--
+    1. Interactive Counter:
+ Create an HTML file with a counter display (e.g., `<p>` element) initialized to 0.
+ Add two buttons labelled "Increment" and "Decrement".
+ Use JavaScript to increment or decrement the counter value when the corresponding button is 
+clicked.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="counter">0</h1>
+    <button class="incre">Increment</button>
+    <button class="decre">Decrement</button>
+
+    <script>
+        let h1=document.querySelector('.counter');
+        console.log(h1.innerHTML);
+        let btn1=document.querySelector('.incre');
+        let btn2=document.querySelector('.decre');
+        btn1.addEventListener('click',()=>{
+             getcounter=h1.innerHTML;
+             
+             h1.innerHTML=++getcounter;
+        })
+        btn2.addEventListener('click',()=>{
+             getcounter=h1.innerHTML;
+             
+             h1.innerHTML=--getcounter;
+        })
+
+    </script>
+</body>
+</html>

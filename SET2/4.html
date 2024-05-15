@@ -1,0 +1,39 @@
+<!--
+    4. Event Handling:
+ Create an HTML file with a `<button>` element and form input.
+ Use JavaScript to print the multiplication table as per the input.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Multiplication table</h3>
+    <input type="text" id="num">
+    <button id="mul">table-click</button>
+    <div class="main">
+        
+    </div>
+    <script>
+        let ip=document.querySelector('#num');
+        let btn=document.querySelector('#mul');
+        let div=document.querySelector('.main');
+        btn.addEventListener('click',()=>{
+        
+            for(let i=1;i<=10;i++){
+                
+               res=i*parseInt(ip.value);
+               let h3=document.createElement('h3');
+               h3.textContent=res;
+               div.appendChild(h3);
+               
+               
+            }
+        })
+    </script>
+
+</body>
+</html>
