@@ -1,0 +1,34 @@
+<!--
+     Create an HTML file with an image (`<img>` element) and a button.
+ Use JavaScript to change the image source when the button is clicked.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./rs1.jpg" height="300px" width="300px"><br><br>
+    <button class="btn">change</button>
+
+    <script>
+        let btn=document.querySelector('.btn');
+        let img=document.querySelector('img');
+        btn.addEventListener('click',()=>{
+            
+          if(img.src == './rs1.jpg'){
+            img.src='./rs2.webp';
+          }
+          else{
+            img.src='./rs1.jpg';
+          }
+          img.style.height='300px';
+          img.style.width='300px';
+        
+        })
+    </script>
+</body>
+</html>

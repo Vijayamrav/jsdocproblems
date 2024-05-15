@@ -1,0 +1,24 @@
+<!--
+    4. Event Handling:
+ Create an HTML file with a `<button>` element.
+ Use JavaScript to add an event listener to the button that alerts a message when clicked.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="alert">click me</button>
+    <script>
+        let btn=document.querySelector('.alert');
+        btn.addEventListener('click',()=>{
+            alert('good morning');
+        })
+        
+
+    </script>
+</body>
+</html>

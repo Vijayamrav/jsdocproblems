@@ -1,0 +1,34 @@
+<!--1. Change Text Content:
+Create an HTML file with a `<p>` element containing some text.
+Use JavaScript to change the text content of the `<p>` element to something else when a button is
+clicked.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            background-color: mediumslateblue;
+        }
+    </style>
+</head>
+<body>
+    <h3>I'm</h3>
+    
+    <script>
+        let h3=document.querySelector('h3');
+        var button=document.createElement('button');
+        button.setAttribute('class','btn');
+        button.textContent='click here';
+        document.body.appendChild(button);
+        button.addEventListener('click',()=>{
+                h3.innerHTML='vijay <mark>varma</mark>'
+        })
+
+    </script>
+    
+</body>
+</html>

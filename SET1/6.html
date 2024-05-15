@@ -1,0 +1,29 @@
+<!--
+    6. Style Manipulation:
+ Create an HTML file with a `<p>` element containing some text.
+ Use JavaScript to change the font size of the `<p>` element when a button is clicked
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>vijay varma </p>
+    
+    <script>
+        let p=document.querySelector('p');
+        let btn=document.createElement('button');
+        document.body.appendChild(btn);
+        
+        btn.textContent='change font size';
+        btn.addEventListener('click',()=>{
+             p.style.fontSize='3rem';
+        })
+
+    </script>
+</body>
+</html>

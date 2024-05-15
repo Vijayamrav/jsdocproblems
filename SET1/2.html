@@ -1,0 +1,41 @@
+<!--
+    2. Div Visibility:
+ Create an HTML file with a `<div>` element containing some content.
+ Use JavaScript to toggle the visibility of the `<div>` element when a button is clicked.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            border:1px solid black;
+            height:200px;
+            width:200px;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+       <h2>im frontend developer</h2>
+    </div>
+    <script>
+        let div=document.querySelector('.main');
+        let buttonV=document.createElement('button');
+        buttonV.textContent="click here";
+        document.body.appendChild(buttonV);
+        buttonV.addEventListener('click',()=>{
+             if(div.style.display ==='none'){
+                div.style.display='block';
+             }
+             else{
+                div.style.display='none';
+             }
+        })
+          
+    </script>
+</body>
+</html>

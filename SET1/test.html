@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Removal</title>
+    <style>
+        /* Add some basic styling */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            cursor: pointer;
+            padding: 8px;
+            margin: 2px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Click on an item to remove it:</h3>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <script>
+        // Get the <ul> element
+        let list = document.getElementById('list');
+
+        // Add a click event listener to the <ul> element
+        list.addEventListener('click', (event) => {
+            // Check if the clicked element is an <li>
+            if (event.target.tagName === 'LI') {
+                // Remove the clicked <li> element
+                event.target.remove();
+            }
+        });
+    </script>
+</body>
+</html>
